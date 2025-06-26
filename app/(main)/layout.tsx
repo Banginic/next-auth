@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
+import { Footer, PrivateNavbar, PublicNavbar } from "../../components/index";
+import { Metadata } from "next";
 
-function MainLayout({ children }: { children: React.ReactNode}) {
+function MainLayout({ children }: { children: React.ReactNode }) {
+
+
   return (
     <div>
-      <main>
-        { children}
-      </main>
+      <PublicNavbar />
+      <main>{children}</main>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default MainLayout
+export default MainLayout;
