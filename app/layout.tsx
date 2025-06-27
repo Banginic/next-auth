@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"h-screen bg-gray-300"}>
+      <body className={"h-screen bg-gray-100"}>
         <AppProvider>
           <PublicNavbar />
           {children}

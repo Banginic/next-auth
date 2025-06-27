@@ -1,8 +1,9 @@
+'use client'
 import React, { useState } from 'react'
 import AppContext from './AppContext'
 
 function AppProvider( {children }: { children: React.ReactNode}) {
-  const [isLoggedIn, setLoggedIn ] = useState(false);
+  const [isLoggedIn, setLoggedIn ] = useState(true);
 
     const values = {
         isLoggedIn, setLoggedIn
