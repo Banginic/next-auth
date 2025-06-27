@@ -25,9 +25,10 @@ const secret = new TextEncoder().encode(process.env.JWT_SECRET!);
     
     //Redirect to login if no token
     if(!token){
+        localStorage.removeItem('token')
         return NextResponse.redirect(new URL('/login', req.url))
     }
-    console.log('pathname', pathname)
+  
 
 
     // Validate token
@@ -35,6 +36,7 @@ const secret = new TextEncoder().encode(process.env.JWT_SECRET!);
     await jwtVerify(token, secret);
     return NextResponse.next();
   } catch (err) {
+    localStorage.removeItem('token');
     return NextResponse.redirect(new URL('/login', req.url));
   }
 }

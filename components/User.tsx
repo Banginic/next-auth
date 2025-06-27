@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 function User() {
@@ -7,7 +8,17 @@ function User() {
       <ul className="absolute hidden group-hover:block shadow-lg rounded p- w-24 top-8 bg-white">
         <li className="hover:bg-gray-100 py-1 px-2">Profile</li>
         <li className="hover:bg-gray-100 py-1 px-2">Verify</li>
-        <li className="text-red-800 hover:bg-red-100 font-semibold py-1 px-2">Log out</li>
+        <li
+          onClick={() => {
+            localStorage.removeItem("token");
+            setTimeout(() => {
+              window.location.href = "/login";
+            }, 1000);
+          }}
+          className="text-red-800 hover:bg-red-100 font-semibold py-1 px-2"
+        >
+          Log out
+        </li>
       </ul>
     </div>
   );
