@@ -4,7 +4,7 @@ import AppContext from './AppContext'
 import { User } from '@/models/types'
 
 function AppProvider( {children }: { children: React.ReactNode}) {
-  const [isLoggedIn, setLoggedIn ] = useState(false);
+  const [isLoggedIn, setLoggedIn ] = useState(true);
   const [User, setUser] = useState<User | null>(null);
 
     const values = {
