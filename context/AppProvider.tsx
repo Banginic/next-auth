@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import AppContext from './AppContext'
 
 function AppProvider( {children }: { children: React.ReactNode}) {
-  const [isLoggedIn, setLoggedIn ] = useState(true);
+  const [isLoggedIn, setLoggedIn ] = useState(false);
 
     const values = {
         isLoggedIn, setLoggedIn
