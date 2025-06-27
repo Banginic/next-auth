@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Footer, Header } from "../components/index";
 import AppProvider from "@/context/AppProvider";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={"h-screen bg-gradient-to-br from-gray-50 to-red-50"}>
         <AppProvider>
           <Header />
+          <ToastContainer />
           {children}
           <Footer />
         </AppProvider>
